@@ -11,13 +11,27 @@ public class Exercicios02 {
          deve informar se o número digitado pelo usuário é maior do que o número gerado.
         */
 
-        int nLeitura = new Scanner(System.in).nextInt();
+        Scanner nLeitura = new Scanner(System.in);
         int nAleatorio = new Random().nextInt(100);
         int nTentativas = 0;
         int nDigitado = 0;
 
         while (nTentativas < 5) {
+            System.out.println("Digite um número: ");
+            nDigitado = nLeitura.nextInt();
+            nTentativas++;
 
+            if (nDigitado == nAleatorio) {
+                System.out.println("Você acertou!");
+                break;
+            } else if (nDigitado < nAleatorio) {
+                System.out.println("O número gerado é menor!");
+            } else {
+                System.out.println("O número gerado é maior!");
+            }
+        }
+        if (nTentativas == 5 && nDigitado != nAleatorio) {
+            System.out.println("Você não acertou em 5 tentativas! O numero gerado era:" + nAleatorio);
         }
 
     }
