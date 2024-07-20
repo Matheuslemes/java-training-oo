@@ -52,6 +52,7 @@ public class Exercicos04 {
                     saldo = saldo - valorTransferir ;
                     System.out.println("Valor trasferido: " + valorTransferir);
                     System.out.println("Saldo atual: " + saldo);
+
                 }
             } else {
                 System.out.println("Fim da operação, obrigado!");
