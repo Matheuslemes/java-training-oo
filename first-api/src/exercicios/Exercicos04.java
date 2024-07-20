@@ -46,9 +46,13 @@ public class Exercicos04 {
             } else if (operacao == 3) {
                 System.out.println("Qual valor deseja transferir: ");
                 double valorTransferir = scanner.nextDouble();
-                saldo = saldo - valorTransferir ;
-                System.out.println("Valor trasferido: " + valorTransferir);
-                System.out.println("Saldo atual: " + saldo);
+                if (valorTransferir > saldo) {
+                    System.out.println("Saldo insuficiente!");
+                } else {
+                    saldo = saldo - valorTransferir ;
+                    System.out.println("Valor trasferido: " + valorTransferir);
+                    System.out.println("Saldo atual: " + saldo);
+                }
             } else {
                 System.out.println("Fim da operação, obrigado!");
             }
